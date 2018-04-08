@@ -41,11 +41,9 @@ class MakeOrder {
         String order = br.readLine();
         switch (order) {
             case "1":
-                String[] meatBurgersIngredients = Burger.meatBurgersIngredients;
                 System.out.println("Choose from our fucking meat burgers menu");
-                String[] meatBurgers = Burger.meatBurgers;
-                for (int i = 0; i < meatBurgers.length; i++) {
-                    String burger = meatBurgers[i] + "\n " + meatBurgersIngredients[i];
+                for (int i = 0; i < Burger.meatBurgersNames.length; i++) {
+                    String burger = Burger.meatBurgersNames[i] + "\n " + Burger.meatBurgersIngredients[i];
                     System.out.println(burger);
                 }
 
@@ -55,11 +53,9 @@ class MakeOrder {
                 break;
 
             case "2":
-                String[] veggyBurgersIngredients = Burger.veggyBurgersIngredients;
                 System.out.println("Princess, choose from our fucking veggy burgers menu");
-                String[] veggyBurgers = Burger.veggyBurgers;
-                for (int i = 0; i < veggyBurgers.length; i++) {
-                    String burger = veggyBurgers[i] + "\n " + veggyBurgersIngredients[i];
+                for (int i = 0; i < Burger.veggyBurgersNames.length; i++) {
+                    String burger = Burger.veggyBurgersNames[i] + "\n " + Burger.veggyBurgersIngredients[i];
                     System.out.println(burger);
                 }
 
@@ -177,11 +173,11 @@ class MakeOrder {
 
 class Burgers {
 
-    String meatBurgers[] = {" 1 SIMPLE BURGER", " 2 MEDIUM BURGER", " 3 WORKER BURGER"};
+    String meatBurgersNames[] = {" 1 SIMPLE BURGER", " 2 MEDIUM BURGER", " 3 WORKER BURGER"};
     private String ingredients[] = {" hamburger", " cheese", " salad", " egg", " bacon", " tomato"};
     String meatBurgersIngredients[] = {makeSimpleBurger(), makeMediumBurger(), makeWorkerBurger()};
 
-    String veggyBurgers[] = {" 1 SIMPLE VEG BURGER", " 2 MEDIUM VEG BURGER", " 3 WORKER VEG BURGER"};
+    String veggyBurgersNames[] = {" 1 SIMPLE VEG BURGER", " 2 MEDIUM VEG BURGER", " 3 WORKER VEG BURGER"};
     private String vegingredients[] = {" cheese", " salad", " egg", " tomato", " aubergine", " zucchini"};
     String veggyBurgersIngredients[] = {makeSimpleVegBurger(), makeMediumVegBurger(), makeWorkerVegBurger()};
 
